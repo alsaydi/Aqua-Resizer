@@ -34,6 +34,8 @@ function aq_resize( $url, $width = null, $height = null, $crop = null, $single =
 	$upload_dir = $upload_info['basedir'];
 	$upload_url = $upload_info['baseurl'];
 	
+	$http_prefix = "http://";
+	$https_prefix = "http://";
 	/* if the $url scheme differs from $upload_url scheme, make them match */
 	if(!strncmp($url,$https_prefix,strlen($https_prefix))){ //if url begins with https:// make $upload_url begin with https:// as well
 		$upload_url = str_replace($http_prefix,$https_prefix,$upload_url);
